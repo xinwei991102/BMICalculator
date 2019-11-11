@@ -14,6 +14,10 @@ class MainActivity : AppCompatActivity() {
         buttonCalculate.setOnClickListener {
             CalculateBMI()
         }
+
+        buttonReset.setOnClickListener {
+            Reset()
+        }
     }
 
     private fun CalculateBMI() {
@@ -41,4 +45,10 @@ class MainActivity : AppCompatActivity() {
             imageViewProfilePic.setImageResource(R.drawable.over)
         }
     }
-}
+
+    private fun Reset() {
+        editTextWeight.setText("")
+        editTextHeight.setText("")
+        textViewBMI.text = getString(R.string.bmi)
+    }
+ }
